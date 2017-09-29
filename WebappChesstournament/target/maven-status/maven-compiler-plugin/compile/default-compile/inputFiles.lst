@@ -1,0 +1,17 @@
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/service/playerregtour.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/dao/CreateTour.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Ref_result_codes.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/util/Connect.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/service/RegisterTour.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Players.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Tournament_organizers.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Actual_tournament_sponsor.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/dao/PlayerRegisterTour.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Player_tournament_participation.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Tournament.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Ref_ranking_codes.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/List_of_sponsor.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Chess_club.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/dao/chess_clubRepo.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/entities/Matches.java
+/home/fersher/eclipse-workspace/WebappChesstournament/src/main/java/phuong/service/CreateTour.java
