@@ -2,6 +2,7 @@ package cassandra.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cassandra.dao.Chess_clubDAO;
@@ -11,6 +12,7 @@ import cassandra.service.Chess_clubService;
 @Service
 public class Chess_clubServiceImpl implements Chess_clubService {
 
+	@Autowired
 	private Chess_clubDAO Chess_clubDAO;
 	
 	

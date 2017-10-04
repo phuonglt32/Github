@@ -1,6 +1,7 @@
 package cassandra.dao.impl;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -16,6 +17,7 @@ public class Chess_clubDAOimpl implements Chess_clubDAO {
 
 	@Override
 	public chess_clubs createchess_clubs(chess_clubs chess_clubs) {
+		chess_clubs.setId(UUID.randomUUID());
 		return myCassandraTemplate.create(chess_clubs);
 	}
 

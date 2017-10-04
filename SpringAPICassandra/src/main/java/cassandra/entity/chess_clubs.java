@@ -1,5 +1,6 @@
 package cassandra.entity;
 
+
 import java.util.UUID;
 
 import org.springframework.data.cassandra.mapping.Column;
@@ -12,11 +13,11 @@ public class chess_clubs {
 	@PrimaryKey("id")
 	private UUID id;
 
-	@Column("club_address")
+	@Column("chess_address")
 	private String address;
 
-	@Column("club_name")
-	private int name;
+	@Column("chess_name")
+	private String name;
 
 	public UUID getId() {
 //		UUID.randomUUID();
@@ -35,11 +36,11 @@ public class chess_clubs {
 		this.address = address;
 	}
 
-	public int getName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setName(int name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -47,7 +48,7 @@ public class chess_clubs {
 		super();
 	}
 
-	public chess_clubs(UUID id, String address, int name) {
+	public chess_clubs(UUID id, String address, String name) {
 		super();
 		this.id = id;
 		this.address = address;
