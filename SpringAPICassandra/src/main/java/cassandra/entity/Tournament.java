@@ -6,33 +6,38 @@ import org.springframework.data.cassandra.mapping.Column;
 import org.springframework.data.cassandra.mapping.PrimaryKey;
 import org.springframework.data.cassandra.mapping.Table;
 
+import com.datastax.driver.core.LocalDate;
+
 
 @Table("tournament")
 public class Tournament {
 	@PrimaryKey("tournamentId")
 	private int tournamentId;
-	@PrimaryKey("organizerId")
 	private int organizerId;
+	
 	@Column("tournamentStartDate")
-	private String tournamentStartDate;
+	private LocalDate tournamentStartDate;
+	
 	@Column("tournamtentEndDate")
-	private String tournamtentEndDate;
+	private LocalDate tournamtentEndDate;
+	
 	@Column("tournamentName")
 	private String tournamentName;
+	
 	@Column("tournamentDetails")
 	private String tournamentDetails;
 	
 	
-	public String getTournamentStartDate() {
+	public LocalDate getTournamentStartDate() {
 		return tournamentStartDate;
 	}
-	public void setTournamentStartDate(String tournamentStartDate) {
+	public void setTournamentStartDate(LocalDate tournamentStartDate) {
 		this.tournamentStartDate = tournamentStartDate;
 	}
-	public String getTournamtentEndDate() {
+	public LocalDate getTournamtentEndDate() {
 		return tournamtentEndDate;
 	}
-	public void setTournamtentEndDate(String tournamtentEndDate) {
+	public void setTournamtentEndDate(LocalDate tournamtentEndDate) {
 		this.tournamtentEndDate = tournamtentEndDate;
 	}
 	public String getTournamentName() {
@@ -59,20 +64,24 @@ public class Tournament {
 	public void setOrganizerId(int organizerId) {
 		this.organizerId = organizerId;
 	}
-	@Override
-	public String toString() {
-		return "Tournament [tournamentId=" + tournamentId + ", organizerId=" + organizerId + "]";
+	public Tournament() {
+		super();
 	}
-	public Tournament( int organizerId, String tournamentStartDate, String tournamtentEndDate,
+	public Tournament(int tournamentId, int organizerId, LocalDate tournamentStartDate, LocalDate tournamtentEndDate,
 			String tournamentName, String tournamentDetails) {
+		super();
+		this.tournamentId = tournamentId;
 		this.organizerId = organizerId;
 		this.tournamentStartDate = tournamentStartDate;
 		this.tournamtentEndDate = tournamtentEndDate;
 		this.tournamentName = tournamentName;
 		this.tournamentDetails = tournamentDetails;
 	}
-	public Tournament() {
-		super();
+	@Override
+	public String toString() {
+		return "Tournament [tournamentId=" + tournamentId + ", organizerId=" + organizerId + ", tournamentStartDate="
+				+ tournamentStartDate + ", tournamtentEndDate=" + tournamtentEndDate + ", tournamentName="
+				+ tournamentName + ", tournamentDetails=" + tournamentDetails + "]";
 	}
 	
 }

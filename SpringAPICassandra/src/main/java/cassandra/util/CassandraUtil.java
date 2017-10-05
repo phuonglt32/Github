@@ -29,9 +29,9 @@ public class CassandraUtil {
      */
     private static final String PORT = "cassandra.port";
     
-    private static final String USER = "cassandra.port";
+    private static final String USER = "";
     
-    private static final String PASSWORD = "cassandra.port";
+    private static final String PASSWORD = "";
     
     @Autowired
     private Environment environment;

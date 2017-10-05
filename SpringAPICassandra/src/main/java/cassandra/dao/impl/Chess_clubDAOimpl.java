@@ -20,6 +20,7 @@ public class Chess_clubDAOimpl implements Chess_clubDAO {
 		chess_clubs.setId(UUID.randomUUID());
 		return myCassandraTemplate.create(chess_clubs);
 	}
+	
 
 	@Override
 	public chess_clubs getchess_clubs(int id) {

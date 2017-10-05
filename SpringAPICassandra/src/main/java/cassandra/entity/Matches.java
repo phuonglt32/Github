@@ -56,11 +56,16 @@ public class Matches {
 		return "Matches [tournamentId=" + tournamentId + ", playerId1=" + playerId1 + ", playerId2=" + playerId2
 				+ ", matchStartDate=" + matchStartDate + "]";
 	}
-	public Matches(int tournamentId, int playerId1, int playerId2, Date matchStartDate) {
 	
+	public Matches(int tournamentId, int playerId1, int playerId2, Date matchStartDate, Date matchEndDate,
+			int resultCode) {
+		super();
+		this.tournamentId = tournamentId;
 		this.playerId1 = playerId1;
 		this.playerId2 = playerId2;
 		this.matchStartDate = matchStartDate;
+		this.matchEndDate = matchEndDate;
+		ResultCode = resultCode;
 	}
 	public Matches() {
 	}

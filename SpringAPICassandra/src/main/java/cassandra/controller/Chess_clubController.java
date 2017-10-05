@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import cassandra.entity.Employee;
+import cassandra.entity.Tournament;
 import cassandra.entity.chess_clubs;
 import cassandra.service.Chess_clubService;
 
@@ -18,13 +19,15 @@ public class Chess_clubController {
     private Chess_clubService chessservice;
 	
 	@RequestMapping(value = "/clubs", method = RequestMethod.POST)    
-	chess_clubs create(@RequestBody chess_clubs chess) {        
+	chess_clubs create(@RequestBody chess_clubs chess) {       
         return chessservice.createchess_clubs(chess);
     }
+	
 	
 	
 	@RequestMapping(value="/clubs", method = RequestMethod.GET)
     List<chess_clubs> findAll() {
         return chessservice.getAllchess_clubs();
+        
     }
 }
