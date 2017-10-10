@@ -30,6 +30,25 @@ public class TournamentServiceImpl implements TournamentServicce {
 	public List<Tournament> getAllTournament() {
 		return tournamentDAO.getAllTournament();
 	}
+
+
+	@Override
+	public Tournament getTournament(int id) {
+		return tournamentDAO.getTournament(id);
+	}
+
+
+	@Override
+	public Tournament updateTournament(Tournament Tournament) {
+		return tournamentDAO.updateTournament(Tournament);
+	}
+
+
+	@Override
+	public void deleteTournament(int id) {
+		tournamentDAO.deleteTournament(id);
+		
+	}
 	
 	
 }

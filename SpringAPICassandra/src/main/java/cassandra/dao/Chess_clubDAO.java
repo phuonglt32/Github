@@ -11,8 +11,6 @@ public interface Chess_clubDAO {
     
     public chess_clubs getchess_clubs(int id);
     
-   
-    
     public chess_clubs updatechess_clubs(chess_clubs chess_clubs);
     
     public void deletechess_clubs(int id);

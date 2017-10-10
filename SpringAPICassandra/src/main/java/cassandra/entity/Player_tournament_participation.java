@@ -7,11 +7,8 @@ import org.springframework.data.cassandra.mapping.Table;
 @Table("player_tournament_participation")
 public class Player_tournament_participation {
 	
-	@PrimaryKey("playerId")
-	private int playerId;
-	
-	@PrimaryKey("tournament")
-	private int tournament;
+	@PrimaryKey
+	private Player_tournament_participationPK pk;
 	
 	@Column("ResultCode")
 	private String finalresult;
@@ -23,22 +20,22 @@ public class Player_tournament_participation {
 	public void setFinal_result(String final_result) {
 		this.finalresult = final_result;
 	}
-	public int getPlayerId() {
-		return playerId;
-	}
-	public void setPlayerId(int playerId) {
-		this.playerId = playerId;
-	}
-	public int getTournament() {
-		return tournament;
-	}
-	public void setTournament(int tournament) {
-		this.tournament = tournament;
-	}
-	public Player_tournament_participation(int playerId, int tournament, String finalresult) {
+	
+	public Player_tournament_participation(Player_tournament_participationPK pk, String finalresult) {
 		super();
-		this.playerId = playerId;
-		this.tournament = tournament;
+		this.pk = pk;
+		this.finalresult = finalresult;
+	}
+	public Player_tournament_participationPK getPk() {
+		return pk;
+	}
+	public void setPk(Player_tournament_participationPK pk) {
+		this.pk = pk;
+	}
+	public String getFinalresult() {
+		return finalresult;
+	}
+	public void setFinalresult(String finalresult) {
 		this.finalresult = finalresult;
 	}
 	public Player_tournament_participation() {

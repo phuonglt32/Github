@@ -27,23 +27,41 @@ public class CreateTournament_sponsor {
 	@Autowired
 	private ListofsponsorService sponsorservice;
 	
+	
 	@Autowired
-	private ActualtournamentsponsorService actual;
+	private ActualtournamentsponsorService actualService;
 	
 	@RequestMapping(value = "/tour", method = RequestMethod.POST)    
-	Actual_tournament_sponsor create(@RequestBody Tournament tour,@RequestBody List_of_sponsor sponsor) {       
-		tour.setTournamentStartDate(LocalDate.fromYearMonthDay(Calendar.YEAR, Calendar.MONTH,Calendar.DATE));
-		tourservice.createtournament(tour);
+	Actual_tournament_sponsor create(Actual_tournament_sponsor actual) {      
+		actual.setTournament_start_date(LocalDate.fromYearMonthDay(Calendar.YEAR, Calendar.MONTH,Calendar.DATE));
+		actual.setTournament_end_date(LocalDate.fromYearMonthDay(Calendar.YEAR, Calendar.MONTH,Calendar.DATE));
+		List_of_sponsor sponsor = new List_of_sponsor(actual.getPk().getSponsorid(),actual.getSponsor_name(),actual.getSponsor_phone());
+		sponsorservice.createsponsor(sponsor);
 		
-        sponsorservice.createsponsor(sponsor);
+		Tournament tour = new Tournament(actual.getPk().getTournamentid(),actual.getOrganizerid(),actual.getTournament_start_date(), actual.getTournament_end_date(), actual.getTournament_name(), actual.getTournament_details());
+        tourservice.createtournament(tour);
         
-        Actual_tournament_sponsor actualentities = new Actual_tournament_sponsor(tour.getTournamentId(), sponsor.getSponsorId(), sponsor.getSponsorName(), sponsor.getSponsorPhone(), tour.getTournamentDetails(), tour.getTournamtentEndDate(), tour.getTournamentName(), tour.getTournamentStartDate());
-        return actual.createactual(actualentities);
+        return actualService.createactual(actual);
+        
+        //Actual_tournament_sponsor actualentities = new Actual_tournament_sponsor(tour.getTournamentId(), sponsor.getSponsorId(), sponsor.getSponsorName(), sponsor.getSponsorPhone(), tour.getTournamentDetails(), tour.getTournamtentEndDate(), tour.getTournamentName(), tour.getTournamentStartDate());
+        //return actual.createactual(actualentities);
     }
 	
 	@RequestMapping(value="/tour", method = RequestMethod.GET)
     List<Tournament> findAll() {
         return tourservice.getAllTournament();
+        
+    }
+	
+	@RequestMapping(value="/sponsor", method = RequestMethod.GET)
+    List<List_of_sponsor> findAllSponsor() {
+        return sponsorservice.getAllList_of_sponsors();
+        
+    }
+    
+    @RequestMapping(value="/actualtoursponsor", method = RequestMethod.GET)
+    List<Actual_tournament_sponsor> findAllactualtoursponsor() {
+        return actualService.getAllActual_tournament_sponsors();
         
     }
 	

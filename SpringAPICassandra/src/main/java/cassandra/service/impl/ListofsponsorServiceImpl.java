@@ -1,5 +1,7 @@
 package cassandra.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +13,7 @@ import cassandra.service.ListofsponsorService;
 public class ListofsponsorServiceImpl implements ListofsponsorService {
 
 	@Autowired
-	private ListofsponsorDAO listofsponsor;
+	private ListofsponsorDAO listofsponsorDAO;
 	
 	
 	public ListofsponsorServiceImpl() {
@@ -19,7 +21,24 @@ public class ListofsponsorServiceImpl implements ListofsponsorService {
 	}
 	@Override
 	public List_of_sponsor createsponsor(List_of_sponsor sponsor) {
-		return listofsponsor.createsponsor(sponsor);
+		return listofsponsorDAO.createsponsor(sponsor);
+	}
+	@Override
+	public List_of_sponsor getList_of_sponsor(int id) {
+		return listofsponsorDAO.getList_of_sponsor(id);
+	}
+	@Override
+	public List_of_sponsor updateList_of_sponsor(List_of_sponsor List_of_sponsor) {
+		return listofsponsorDAO.updateList_of_sponsor(List_of_sponsor);
+	}
+	@Override
+	public void deleteList_of_sponsor(int id) {
+		listofsponsorDAO.deleteList_of_sponsor(id);
+		
+	}
+	@Override
+	public List<List_of_sponsor> getAllList_of_sponsors() {
+		return listofsponsorDAO.getAllList_of_sponsor();
 	}
 	
 }

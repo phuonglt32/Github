@@ -9,17 +9,17 @@ import com.datastax.driver.core.LocalDate;
 @Table("actual_tournament_sponsor")
 public class Actual_tournament_sponsor {
 	
-	@PrimaryKey("tournamentid")
-	private int tournamentid;
-	
-	@PrimaryKey("sponsorid")
-	private int sponsorid;
+	@PrimaryKey
+	private Actual_tournament_sposorPK pk;
 	
 	@Column("sponsor_name")
 	private String sponsor_name;
 	
 	@Column("sponsor_phone")
 	private String sponsor_phone;
+	
+	@Column("organizerid")
+	private int organizerid;
 	
 	@Column("tournament_details")
 	private String tournament_details;
@@ -33,7 +33,13 @@ public class Actual_tournament_sponsor {
 	@Column("tournament_start_date")
 	private LocalDate tournament_start_date;
 	
-	
+
+	public int getOrganizerid() {
+		return organizerid;
+	}
+	public void setOrganizerid(int organizerid) {
+		this.organizerid = organizerid;
+	}
 	public String getSponsor_name() {
 		return sponsor_name;
 	}
@@ -70,42 +76,41 @@ public class Actual_tournament_sponsor {
 	public void setTournament_start_date(LocalDate tournament_start_date) {
 		this.tournament_start_date = tournament_start_date;
 	}
-	public int getTournamentid() {
-		return tournamentid;
+	
+	
+	public Actual_tournament_sposorPK getPk() {
+		return pk;
 	}
-	public void setTournamentid(int tournamentid) {
-		this.tournamentid = tournamentid;
-	}
-	public int getSponsorid() {
-		return sponsorid;
-	}
-	public void setSponsorid(int sponsorid) {
-		this.sponsorid = sponsorid;
+	public void setPk(Actual_tournament_sposorPK pk) {
+		this.pk = pk;
 	}
 	
-	public Actual_tournament_sponsor(int tournamentid, int sponsorid, String sponsor_name, String sponsor_phone,
+	public Actual_tournament_sponsor(Actual_tournament_sposorPK pk, String sponsor_name, String sponsor_phone,
 			String tournament_details, LocalDate tournament_end_date, String tournament_name,
-			LocalDate tournament_start_date) {
+			LocalDate tournament_start_date,int organizerid) {
 		super();
-		this.tournamentid = tournamentid;
-		this.sponsorid = sponsorid;
+		this.pk = pk;
 		this.sponsor_name = sponsor_name;
 		this.sponsor_phone = sponsor_phone;
 		this.tournament_details = tournament_details;
 		this.tournament_end_date = tournament_end_date;
 		this.tournament_name = tournament_name;
 		this.tournament_start_date = tournament_start_date;
+		this.organizerid = organizerid;
 	}
 	public Actual_tournament_sponsor() {
 		super();
 	}
 	@Override
 	public String toString() {
-		return "Actual_tournament_sponsor [tournamentid=" + tournamentid + ", sponsorid=" + sponsorid
-				+ ", sponsor_name=" + sponsor_name + ", sponsor_phone=" + sponsor_phone + ", tournament_details="
-				+ tournament_details + ", tournament_end_date=" + tournament_end_date + ", tournament_name="
-				+ tournament_name + ", tournament_start_date=" + tournament_start_date + "]";
+		return "Actual_tournament_sponsor [pk=" + pk + ", sponsor_name=" + sponsor_name + ", sponsor_phone="
+				+ sponsor_phone + ", organizerid=" + organizerid + ", tournament_details=" + tournament_details
+				+ ", tournament_end_date=" + tournament_end_date + ", tournament_name=" + tournament_name
+				+ ", tournament_start_date=" + tournament_start_date + "]";
 	}
+	
+	
+	
 	
 	
 	

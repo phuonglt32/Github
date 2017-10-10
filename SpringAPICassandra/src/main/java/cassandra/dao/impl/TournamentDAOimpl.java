@@ -27,4 +27,23 @@ public class TournamentDAOimpl implements TournamentDAO {
 		return myCassandraTemplate.findAll(Tournament.class);
 	}
 
+
+	@Override
+	public Tournament getTournament(int id) {
+		return myCassandraTemplate.findById(id, Tournament.class);
+	}
+
+
+	@Override
+	public Tournament updateTournament(Tournament Tournament) {
+		return myCassandraTemplate.update(Tournament);
+	}
+
+
+	@Override
+	public void deleteTournament(int id) {
+		myCassandraTemplate.deleteById(id, Tournament.class);
+		
+	}
+
 }
