@@ -27,7 +27,7 @@ public class EsConfig {
 
     @Value("${elasticsearch.port}")
     private int EsPort;
-
+    
     @Value("${elasticsearch.clustername}")
     private String EsClusterName;
 

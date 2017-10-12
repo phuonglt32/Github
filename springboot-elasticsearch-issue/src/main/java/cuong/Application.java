@@ -59,7 +59,7 @@ public class Application implements CommandLineRunner {
 
 		for (Issue issue : issuesList) {
 			
-//			System.out.println("id:" + issue.getId());
+			System.out.println("id:" + issue.getId());
 //			System.out.println("subject:" + issue.getSubject());
 //			System.out.println("description:" + issue.getDescription());
 //			System.out.println("startdate:" + issue.getStartDate());
