@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:cuong.Application</config>
+		<config>java:phuong.Application</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

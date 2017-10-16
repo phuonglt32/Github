@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [15/Oct/2017:09:22:16 +0700] "GET /elasticsearch/project-cuong-test/issue HTTP/1.1" 200 834 http-bio-8080-exec-1 9933
+0:0:0:0:0:0:0:1 - - [15/Oct/2017:09:22:36 +0700] "GET /elasticsearch/project-cuong-test/issue HTTP/1.1" 500 4391 http-bio-8080-exec-3 71
+0:0:0:0:0:0:0:1 - - [15/Oct/2017:09:31:11 +0700] "GET /elasticsearch/project-cuong-test/issue HTTP/1.1" 200 834 http-bio-8080-exec-1 2184
+0:0:0:0:0:0:0:1 - - [15/Oct/2017:09:31:21 +0700] "GET /elasticsearch/project-cuong-test/issue HTTP/1.1" 500 4245 http-bio-8080-exec-3 264
+0:0:0:0:0:0:0:1 - - [15/Oct/2017:09:31:27 +0700] "GET /elasticsearch/project-cuong-test/issue HTTP/1.1" 500 4245 http-bio-8080-exec-4 4
+0:0:0:0:0:0:0:1 - - [15/Oct/2017:09:31:33 +0700] "GET /elasticsearch/project-cuong-test/issue HTTP/1.1" 500 4245 http-bio-8080-exec-2 8
+0:0:0:0:0:0:0:1 - - [15/Oct/2017:09:32:04 +0700] "GET /elasticsearch/project-cuong-test/issue HTTP/1.1" 200 834 http-bio-8080-exec-1 1059
+0:0:0:0:0:0:0:1 - - [15/Oct/2017:09:32:07 +0700] "GET /elasticsearch/project-cuong-test/issue HTTP/1.1" 500 4245 http-bio-8080-exec-2 47
