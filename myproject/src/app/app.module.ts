@@ -10,7 +10,8 @@ import { NewAppComponent } from './new-app/new-app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideRightComponent } from './aside-right/aside-right.component';
-
+import { IssueComponent } from './issue/issue.component';
+import {appRoutes} from './app.routes';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { AsideRightComponent } from './aside-right/aside-right.component';
     NewAppComponent,
     HeaderComponent,
     FooterComponent,
-    AsideRightComponent
+    AsideRightComponent,
+    IssueComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    appRoutes
   ],
   providers: [Issue1Service],
   bootstrap: [AppComponent]

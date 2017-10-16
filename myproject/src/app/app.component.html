@@ -1,62 +1,9 @@
 <app-header>
 </app-header>
-<div class="row">
-  <div class="col-md-9 col-sm-12 autoscroll">
-    <table class="table table-hover table-striped table-bordered table-center">
-      <tr>
-        <th>
-          #
-        </th>
-        <th>
-          Tracker
-        </th>
-        <th>
-          Status
-        </th>
-        <th>
-          Priority
-        </th>
-        <th>
-          Category
-        </th>
-        <th>
-          Subject
-        </th>
-        <th>
-          Assignee
-        </th>
-        <th>
-          Updated
-        </th>
-      </tr>
-      <tr *ngFor="let issue of issues | async">
-        <td>
-          {{issue.id}}
-        </td>
-        <td>
-          {{issue.tracker}}
-        </td>
-        <td>
-          {{issue.status}}
-        </td>
-        <td>
-          {{issue.priorityText}}
-        </td>
-        <td>
-        </td>
-        <td>
-          {{issue.subject}}
-        </td>
-        <td>
-          {{issue.assignee}}
-        </td>
-        <td>
-          {{issue.updatedOn}}
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="col-md-3 hidden-sm hidden-xs">
-    <app-aside-right></app-aside-right>
-  </div>
-</div>
+
+
+<router-outlet>
+
+</router-outlet>
+
+<app-footer></app-footer>

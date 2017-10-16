@@ -8,7 +8,7 @@ import org.elasticsearch.client.RestHighLevelClient;
 
 public class MyIssueUtility {
 	private static RestClient restClient = RestClient //
-			.builder(new HttpHost("10.225.3.252", 9200, "http")).build();
+			.builder(new HttpHost("localhost", 9200, "http")).build();
 
 	public static RestHighLevelClient getClient() {
 
